@@ -1,0 +1,1682 @@
+Last login: Sat Feb  1 11:11:48 on ttys000
+jaypadhiyar@Jaykumars-MacBook-Air ~ % cd example         
+cd: no such file or directory: example
+jaypadhiyar@Jaykumars-MacBook-Air ~ % cd herd            
+jaypadhiyar@Jaykumars-MacBook-Air herd % cd example
+jaypadhiyar@Jaykumars-MacBook-Air example % cd example
+  [Restored 3 Feb 2025 at 12:06:55 PM]
+Last login: Sat Feb  1 11:15:04 on ttys000
+Restored session: Sat Feb  1 11:22:17 IST 2025
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan
+Laravel Framework 11.41.3
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                     Display basic information about your application
+  clear-compiled            Remove the compiled class file
+  completion                Dump the shell completion script
+  db                        Start a new database CLI session
+  docs                      Access the Laravel documentation
+  down                      Put the application into maintenance / demo mode
+  env                       Display the current framework environment
+  help                      Display help for a command
+  inspire                   Display an inspiring quote
+  list                      List commands
+  migrate                   Run the database migrations
+  optimize                  Cache framework bootstrap, configuration, and metadata to increase performance
+  pail                      Tails the application logs.
+  serve                     Serve the application on the PHP development server
+  test                      Run the application tests
+  tinker                    Interact with your application
+  up                        Bring the application out of maintenance mode
+ auth
+  auth:clear-resets         Flush expired password reset tokens
+ cache
+  cache:clear               Flush the application cache
+  cache:forget              Remove an item from the cache
+  cache:prune-stale-tags    Prune stale cache tags from the cache (Redis only)
+ channel
+  channel:list              List all registered private broadcast channels
+ config
+  config:cache              Create a cache file for faster configuration loading
+  config:clear              Remove the configuration cache file
+  config:publish            Publish configuration files to your application
+  config:show               Display all of the values for a given configuration file or key
+ db
+  db:monitor                Monitor the number of connections on the specified database
+  db:seed                   Seed the database with records
+  db:show                   Display information about the given database
+  db:table                  Display information about the given database table
+  db:wipe                   Drop all tables, views, and types
+ env
+  env:decrypt               Decrypt an environment file
+  env:encrypt               Encrypt an environment file
+ event
+  event:cache               Discover and cache the application's events and listeners
+  event:clear               Clear all cached events and listeners
+  event:list                List the application's events and listeners
+ install
+  install:api               Create an API routes file and install Laravel Sanctum or Laravel Passport
+  install:broadcasting      Create a broadcasting channel routes file
+ key
+  key:generate              Set the application key
+ lang
+  lang:publish              Publish all language files that are available for customization
+ make
+  make:cache-table          [cache:table] Create a migration for the cache database table
+  make:cast                 Create a new custom Eloquent cast class
+  make:channel              Create a new channel class
+  make:class                Create a new class
+  make:command              Create a new Artisan command
+  make:component            Create a new view component class
+  make:controller           Create a new controller class
+  make:enum                 Create a new enum
+  make:event                Create a new event class
+  make:exception            Create a new custom exception class
+  make:factory              Create a new model factory
+  make:interface            Create a new interface
+  make:job                  Create a new job class
+  make:job-middleware       Create a new job middleware class
+  make:listener             Create a new event listener class
+  make:mail                 Create a new email class
+  make:middleware           Create a new HTTP middleware class
+  make:migration            Create a new migration file
+  make:model                Create a new Eloquent model class
+  make:notification         Create a new notification class
+  make:notifications-table  [notifications:table] Create a migration for the notifications table
+  make:observer             Create a new observer class
+  make:policy               Create a new policy class
+  make:provider             Create a new service provider class
+  make:queue-batches-table  [queue:batches-table] Create a migration for the batches database table
+  make:queue-failed-table   [queue:failed-table] Create a migration for the failed queue jobs database table
+  make:queue-table          [queue:table] Create a migration for the queue jobs database table
+  make:request              Create a new form request class
+  make:resource             Create a new resource
+  make:rule                 Create a new validation rule
+  make:scope                Create a new scope class
+  make:seeder               Create a new seeder class
+  make:session-table        [session:table] Create a migration for the session database table
+  make:test                 Create a new test class
+  make:trait                Create a new trait
+  make:view                 Create a new view
+ migrate
+  migrate:fresh             Drop all tables and re-run all migrations
+  migrate:install           Create the migration repository
+  migrate:refresh           Reset and re-run all migrations
+  migrate:reset             Rollback all database migrations
+  migrate:rollback          Rollback the last database migration
+  migrate:status            Show the status of each migration
+ model
+  model:prune               Prune models that are no longer needed
+  model:show                Show information about an Eloquent model
+ optimize
+  optimize:clear            Remove the cached bootstrap files
+ package
+  package:discover          Rebuild the cached package manifest
+ pest
+  pest:dataset              Create a new dataset file
+  pest:test                 Create a new test file
+ queue
+  queue:clear               Delete all of the jobs from the specified queue
+  queue:failed              List all of the failed queue jobs
+  queue:flush               Flush all of the failed queue jobs
+  queue:forget              Delete a failed queue job
+  queue:listen              Listen to a given queue
+  queue:monitor             Monitor the size of the specified queues
+  queue:prune-batches       Prune stale entries from the batches database
+  queue:prune-failed        Prune stale entries from the failed jobs table
+  queue:restart             Restart queue worker daemons after their current job
+  queue:retry               Retry a failed queue job
+  queue:retry-batch         Retry the failed jobs for a batch
+  queue:work                Start processing jobs on the queue as a daemon
+ route
+  route:cache               Create a route cache file for faster route registration
+  route:clear               Remove the route cache file
+  route:list                List all registered routes
+ sail
+  sail:add                  Add a service to an existing Sail installation
+  sail:install              Install Laravel Sail's default Docker Compose file
+  sail:publish              Publish the Laravel Sail Docker files
+ schedule
+  schedule:clear-cache      Delete the cached mutex files created by scheduler
+  schedule:interrupt        Interrupt the current schedule run
+  schedule:list             List all scheduled tasks
+  schedule:run              Run the scheduled commands
+  schedule:test             Run a scheduled command
+  schedule:work             Start the schedule worker
+ schema
+  schema:dump               Dump the given database schema
+ storage
+  storage:link              Create the symbolic links configured for the application
+  storage:unlink            Delete existing symbolic links configured for the application
+ stub
+  stub:publish              Publish all stubs that are available for customization
+ vendor
+  vendor:publish            Publish any publishable assets from vendor packages
+ view
+  view:cache                Compile all of the application's Blade templates
+  view:clear                Clear all compiled view files
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan db:show
+
+  SQLite .................................................................................................................................... 3.43.2  
+  Connection ................................................................................................................................ sqlite  
+  Database ................................................................................................................ database/database.sqlite  
+  Host .............................................................................................................................................  
+  Port .............................................................................................................................................  
+  Username .........................................................................................................................................  
+  URL ..............................................................................................................................................  
+  Open Connections .................................................................................................................................  
+  Tables ......................................................................................................................................... 9  
+
+  Table ....................................................................................................................................... Size  
+  cache .......................................................................................................................................... —  
+  cache_locks .................................................................................................................................... —  
+  failed_jobs .................................................................................................................................... —  
+  job_batches .................................................................................................................................... —  
+  jobs ........................................................................................................................................... —  
+  migrations ..................................................................................................................................... —  
+  password_reset_tokens .......................................................................................................................... —  
+  sessions ....................................................................................................................................... —  
+  users .......................................................................................................................................... —  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:fresh
+
+  Dropping all tables .................................................................................................................. 7.98ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................. 1.75ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ................................................................................................. 2.25ms DONE
+  0001_01_01_000001_create_cache_table ................................................................................................. 0.65ms DONE
+  0001_01_01_000002_create_jobs_table .................................................................................................. 1.97ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:migration     
+
+ ┌ What should the migration be named? ─────────────────────────┐
+ │ create_job_listing_table                                     │
+ └──────────────────────────────────────────────────────────────┘
+
+   INFO  Migration [database/migrations/2025_02_03_070059_create_job_listing_table.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate       
+
+   INFO  Running migrations.  
+
+  2025_02_03_070059_create_job_listing_table ........................................................................................... 1.86ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> $name ='jay'
+= "jay"
+
+> App\Models\Job::create(['title' => 'Farmer','salery' => '$100000']);
+
+   Illuminate\Database\Eloquent\MassAssignmentException  Add [title] to fillable property to allow mass assignment on [App\Models\Job].
+
+> App\Models\Job::create(['title' => 'Farmer','salary' => '$100000']);
+
+   Illuminate\Database\Eloquent\MassAssignmentException  Add [title] to fillable property to allow mass assignment on [App\Models\Job].
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker 
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::create(['title' => 'Farmer','salary' => '$100000']);
+= App\Models\Job {#5234
+    title: "Farmer",
+    salary: "$100000",
+    updated_at: "2025-02-03 08:09:08",
+    created_at: "2025-02-03 08:09:08",
+    id: 4,
+  }
+
+> App\Models\Job::all();                                              
+= Illuminate\Database\Eloquent\Collection {#5219
+    all: [
+      App\Models\Job {#5215
+        id: 1,
+        title: "Director",
+        salary: "$50000",
+        created_at: null,
+        updated_at: null,
+      },
+      App\Models\Job {#5214
+        id: 2,
+        title: "Programmer",
+        salary: "$20000",
+        created_at: null,
+        updated_at: null,
+      },
+      App\Models\Job {#5213
+        id: 3,
+        title: "Teacher",
+        salary: "$10000",
+        created_at: null,
+        updated_at: null,
+      },
+      App\Models\Job {#5212
+        id: 4,
+        title: "Farmer",
+        salary: "$100000",
+        created_at: "2025-02-03 08:09:08",
+        updated_at: "2025-02-03 08:09:08",
+      },
+    ],
+  }
+
+> App\Models\Job::find(5);
+= null
+
+> App\Models\Job::find(4);
+= App\Models\Job {#5225
+    id: 4,
+    title: "Farmer",
+    salary: "$100000",
+    created_at: "2025-02-03 08:09:08",
+    updated_at: "2025-02-03 08:09:08",
+  }
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::all();                                              
+= Illuminate\Database\Eloquent\Collection {#5219
+    all: [
+      App\Models\Job {#5220
+        id: 4,
+        title: "Farmer",
+        salary: "$100000",
+        created_at: "2025-02-03 08:09:08",
+        updated_at: "2025-02-03 08:09:08",
+      },
+    ],
+  }
+
+> App\Models\Job::delete();
+
+   Error  Non-static method Illuminate\Database\Eloquent\Model::delete() cannot be called statically.
+
+> $job = App\Models\Job;   
+
+   Error  Undefined constant "App\Models\Job".
+
+> $job = App\Models\Job::all();
+= Illuminate\Database\Eloquent\Collection {#5209
+    all: [
+      App\Models\Job {#5212
+        id: 4,
+        title: "Farmer",
+        salary: "$100000",
+        created_at: "2025-02-03 08:09:08",
+        updated_at: "2025-02-03 08:09:08",
+      },
+    ],
+  }
+
+> $job->title;
+
+   Exception  Property [title] does not exist on this collection instance.
+
+> $job[]->title;
+
+   FATAL ERROR  Cannot use [] for reading in vendor/psy/psysh/src/CodeCleaner/EmptyArrayDimFetchPass.php on line 62.
+
+> $job = App\Models\Job::find(4);
+= App\Models\Job {#5255
+    id: 4,
+    title: "Farmer",
+    salary: "$100000",
+    created_at: "2025-02-03 08:09:08",
+    updated_at: "2025-02-03 08:09:08",
+  }
+
+> $job->title;                   
+= "Farmer"
+
+> $job->salary; 
+= "$100000"
+
+> $job->delete();
+= true
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan help make:model
+Description:
+  Create a new Eloquent model class
+
+Usage:
+  make:model [options] [--] <name>
+
+Arguments:
+  name                  The name of the model
+
+Options:
+  -a, --all             Generate a migration, seeder, factory, policy, resource controller, and form request classes for the model
+  -c, --controller      Create a new controller for the model
+  -f, --factory         Create a new factory for the model
+      --force           Create the class even if the model already exists
+  -m, --migration       Create a new migration file for the model
+      --morph-pivot     Indicates if the generated model should be a custom polymorphic intermediate table model
+      --policy          Create a new policy for the model
+  -s, --seed            Create a new seeder for the model
+  -p, --pivot           Indicates if the generated model should be a custom intermediate table model
+  -r, --resource        Indicates if the generated controller should be a resource controller
+      --api             Indicates if the generated controller should be an API resource controller
+  -R, --requests        Create new form request classes and use them in the resource controller
+      --test            Generate an accompanying Test test for the Model
+      --pest            Generate an accompanying Pest test for the Model
+      --phpunit         Generate an accompanying PHPUnit test for the Model
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker         
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::create(['title' => 'Farmer','salary' => '$100000']);
+= App\Models\Job {#5234
+    title: "Farmer",
+    salary: "$100000",
+    updated_at: "2025-02-03 08:45:42",
+    created_at: "2025-02-03 08:45:42",
+    id: 5,
+  }
+
+> $name ='jay'^C                                                      
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker         
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\User::factory()->create();                               
+= App\Models\User {#5284
+    name: "Isabel Romaguera",
+    email: "hailie.williamson@example.net",
+    email_verified_at: "2025-02-03 08:48:26",
+    #password: "$2y$12$9QDFpEtKf3XGBSB/xlHdkeEUSpbJKgy5H10PPBa.wuw1HV7uV07Cu",
+    #remember_token: "kDT2sapsFa",
+    updated_at: "2025-02-03 08:48:26",
+    created_at: "2025-02-03 08:48:26",
+    id: 1,
+  }
+
+> $job = App\Models\User::all();                                      
+= Illuminate\Database\Eloquent\Collection {#5210
+    all: [],
+  }
+
+> $job = App\Models\User::all();^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate        
+
+   INFO  Nothing to migrate.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:fresh  
+
+  Dropping all tables .................................................................................................................. 6.26ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................. 1.79ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ................................................................................................. 2.39ms DONE
+  0001_01_01_000001_create_cache_table ................................................................................................. 0.64ms DONE
+  0001_01_01_000002_create_jobs_table .................................................................................................. 2.52ms DONE
+  2025_02_03_070059_create_job_listing_table ........................................................................................... 0.31ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker       
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\User::factory()-;                                        
+
+   PARSE ERROR  PHP Parse error: Syntax error, unexpected ';' in vendor/psy/psysh/src/Exception/ParseErrorException.php on line 44.
+
+> App\Models\User::factory()->create();
+
+   Illuminate\Database\QueryException  SQLSTATE[HY000]: General error: 1 table users has no column named name (Connection: sqlite, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Merlin Greenfelder, wanda.rowe@example.com, 2025-02-03 08:54:09, $2y$12$LBE3phcIhbHb2vaUtVhNZeP1lvsVO1/zPdLt8kFB7CgmCwOqykr0K, FxYUpC3gZ6, 2025-02-03 08:54:09, 2025-02-03 08:54:09)).
+
+> App\Models\User::factory()->create();
+
+   Illuminate\Database\QueryException  SQLSTATE[HY000]: General error: 1 table users has no column named name (Connection: sqlite, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Mrs. Berneice Cormier Sr., wilkinson.audie@example.com, 2025-02-03 08:55:39, $2y$12$LBE3phcIhbHb2vaUtVhNZeP1lvsVO1/zPdLt8kFB7CgmCwOqykr0K, BECbZXlOa9, 2025-02-03 08:55:39, 2025-02-03 08:55:39)).
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\User::factory()->create();
+= App\Models\User {#5284
+    first_name: "Daisha",
+    last_name: "O'Connell",
+    email: "nhane@example.com",
+    email_verified_at: "2025-02-03 08:55:57",
+    #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+    #remember_token: "8EJGB44Zy7",
+    updated_at: "2025-02-03 08:55:57",
+    created_at: "2025-02-03 08:55:57",
+    id: 1,
+  }
+
+> App\Models\User::factory(25)->create();
+= Illuminate\Database\Eloquent\Collection {#6288
+    all: [
+      App\Models\User {#6283
+        first_name: "Dillan",
+        last_name: "Walsh",
+        email: "mills.tony@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "kD5LuNXUlL",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 2,
+      },
+      App\Models\User {#6286
+        first_name: "Marvin",
+        last_name: "Daniel",
+        email: "robel.elroy@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "sniumniGSh",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 3,
+      },
+      App\Models\User {#6285
+        first_name: "Nicholas",
+        last_name: "Weissnat",
+        email: "dryan@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "CTLROFaEQw",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 4,
+      },
+      App\Models\User {#6282
+        first_name: "Garfield",
+        last_name: "Greenholt",
+        email: "verlie35@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "32UVDn6YII",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 5,
+      },
+      App\Models\User {#6281
+        first_name: "Monica",
+        last_name: "Corwin",
+        email: "lionel44@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "UenJl0wsyj",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 6,
+      },
+      App\Models\User {#6280
+        first_name: "Lolita",
+        last_name: "Wehner",
+        email: "hermiston.billie@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "YVoUkut7dL",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 7,
+      },
+      App\Models\User {#6279
+        first_name: "Caitlyn",
+        last_name: "Howell",
+        email: "ybogisich@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "JyYiZ6IiGQ",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 8,
+      },
+      App\Models\User {#6278
+        first_name: "Jamey",
+        last_name: "Prosacco",
+        email: "qrohan@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "Mm77oUEpvR",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 9,
+      },
+      App\Models\User {#6277
+        first_name: "Rodolfo",
+        last_name: "Armstrong",
+        email: "ashlynn.lynch@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "BQEegimyll",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 10,
+      },
+      App\Models\User {#6276
+        first_name: "Alena",
+        last_name: "Mertz",
+        email: "schulist.martina@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "2cfXhYg1dQ",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 11,
+      },
+      App\Models\User {#6275
+        first_name: "Ruby",
+        last_name: "Denesik",
+        email: "uschumm@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "VbKt7QmXUW",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 12,
+      },
+      App\Models\User {#6274
+        first_name: "Leslie",
+        last_name: "Huel",
+        email: "kiarra.lynch@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "UORfwaWlOh",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 13,
+      },
+      App\Models\User {#6273
+        first_name: "Rolando",
+        last_name: "Wyman",
+        email: "freeda.monahan@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "LszvZ1Joz8",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 14,
+      },
+      App\Models\User {#6272
+        first_name: "Lambert",
+        last_name: "Bogisich",
+        email: "kertzmann.gudrun@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "yqBFjRpxWp",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 15,
+      },
+      App\Models\User {#6271
+        first_name: "Giovanna",
+        last_name: "Dibbert",
+        email: "zborer@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "RZOcJFLIHp",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 16,
+      },
+      App\Models\User {#6270
+        first_name: "Everett",
+        last_name: "Dare",
+        email: "icorwin@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "iMq7BaRJHe",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 17,
+      },
+      App\Models\User {#6269
+        first_name: "Freeda",
+        last_name: "Pollich",
+        email: "leffler.amber@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "buxCU74ibu",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 18,
+      },
+      App\Models\User {#6268
+        first_name: "Shanon",
+        last_name: "Rodriguez",
+        email: "marlin36@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "LFS08HLJ4Y",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 19,
+      },
+      App\Models\User {#6267
+        first_name: "Eldon",
+        last_name: "Dickinson",
+        email: "letitia.cruickshank@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "N8gl2Vej0k",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 20,
+      },
+      App\Models\User {#6266
+        first_name: "Kennedy",
+        last_name: "Hahn",
+        email: "goldner.suzanne@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "ZsqlL2bWrH",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 21,
+      },
+      App\Models\User {#6265
+        first_name: "Jaeden",
+        last_name: "Hartmann",
+        email: "ferdman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "soRFu9JHfm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 22,
+      },
+      App\Models\User {#6264
+        first_name: "Doyle",
+        last_name: "Connelly",
+        email: "addie.satterfield@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "Y9atAG4YUY",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 23,
+      },
+      App\Models\User {#6263
+        first_name: "Fletcher",
+        last_name: "Wiza",
+        email: "reginald.kunde@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "flgJnqOZH4",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 24,
+      },
+      App\Models\User {#6262
+        first_name: "Jamie",
+        last_name: "Denesik",
+        email: "stamm.linnie@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "HGNYVQYEMm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 25,
+      },
+      App\Models\User {#6261
+        first_name: "Josianne",
+        last_name: "Hodkiewicz",
+        email: "chet.herman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "SoJbSBr6Gs",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 26,
+      },
+    ],
+  }
+
+ ESCOC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ESCOD
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "ZsqlL2bWrH",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 21,
+      },
+      App\Models\User {#6265
+        first_name: "Jaeden",
+        last_name: "Hartmann",
+        email: "ferdman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "soRFu9JHfm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 22,
+      },
+      App\Models\User {#6264
+        first_name: "Doyle",
+        last_name: "Connelly",
+        email: "addie.satterfield@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "Y9atAG4YUY",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 23,
+      },
+      App\Models\User {#6263
+        first_name: "Fletcher",
+        last_name: "Wiza",
+        email: "reginald.kunde@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "flgJnqOZH4",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 24,
+      },
+      App\Models\User {#6262
+        first_name: "Jamie",
+        last_name: "Denesik",
+        email: "stamm.linnie@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "HGNYVQYEMm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 25,
+      },
+      App\Models\User {#6261
+        first_name: "Josianne",
+        last_name: "Hodkiewicz",
+        email: "chet.herman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "SoJbSBr6Gs",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 26,
+      },
+    ],
+  }
+
+ ESCOC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ESCOD
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "ZsqlL2bWrH",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 21,
+      },
+      App\Models\User {#6265
+        first_name: "Jaeden",
+        last_name: "Hartmann",
+        email: "ferdman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "soRFu9JHfm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 22,
+      },
+      App\Models\User {#6264
+        first_name: "Doyle",
+        last_name: "Connelly",
+        email: "addie.satterfield@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "Y9atAG4YUY",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 23,
+      },
+      App\Models\User {#6263
+        first_name: "Fletcher",
+        last_name: "Wiza",
+        email: "reginald.kunde@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "flgJnqOZH4",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 24,
+      },
+      App\Models\User {#6262
+        first_name: "Jamie",
+        last_name: "Denesik",
+        email: "stamm.linnie@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "HGNYVQYEMm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 25,
+      },
+      App\Models\User {#6261
+        first_name: "Josianne",
+        last_name: "Hodkiewicz",
+        email: "chet.herman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "SoJbSBr6Gs",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 26,
+      },
+    ],
+  }
+
+(END)
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "ZsqlL2bWrH",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 21,
+      },
+      App\Models\User {#6265
+        first_name: "Jaeden",
+        last_name: "Hartmann",
+        email: "ferdman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "soRFu9JHfm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 22,
+      },
+      App\Models\User {#6264
+        first_name: "Doyle",
+        last_name: "Connelly",
+        email: "addie.satterfield@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "Y9atAG4YUY",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 23,
+      },
+      App\Models\User {#6263
+        first_name: "Fletcher",
+        last_name: "Wiza",
+        email: "reginald.kunde@example.org",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "flgJnqOZH4",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 24,
+      },
+      App\Models\User {#6262
+        first_name: "Jamie",
+        last_name: "Denesik",
+        email: "stamm.linnie@example.com",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "HGNYVQYEMm",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 25,
+      },
+      App\Models\User {#6261
+        first_name: "Josianne",
+        last_name: "Hodkiewicz",
+        email: "chet.herman@example.net",
+        email_verified_at: "2025-02-03 08:59:45",
+        #password: "$2y$12$oOPRGnCosXnNGr0QTHhce.gEwoHq6OZRzP.0wOqlS5jt9Hv1kteZK",
+        #remember_token: "SoJbSBr6Gs",
+        updated_at: "2025-02-03 08:59:45",
+        created_at: "2025-02-03 08:59:45",
+        id: 26,
+      },
+    ],
+  }
+
+(END)
+end
+zsh: parse error near `end'
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:factory JobFactory
+
+   INFO  Factory [database/factories/JobFactory.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker                 
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::factory()->create();   
+
+   BadMethodCallException  Call to undefined method App\Models\Job::factory().
+
+> App\Models\Job::factory()->create();
+
+   BadMethodCallException  Call to undefined method App\Models\Job::factory().
+
+> App\Models\User::factory()->create();^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::factory()->create();
+= App\Models\Job {#5280
+    title: "Aviation Inspector",
+    salary: "$50000 USD",
+    updated_at: "2025-02-03 09:08:53",
+    created_at: "2025-02-03 09:08:53",
+    id: 1,
+  }
+
+> App\Models\Job::factory(10)->create();
+= Illuminate\Database\Eloquent\Collection {#5279
+    all: [
+      App\Models\Job {#5283
+        title: "Gaming Manager",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 2,
+      },
+      App\Models\Job {#5254
+        title: "Radio Mechanic",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 3,
+      },
+      App\Models\Job {#5284
+        title: "Forest Fire Fighting Supervisor",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 4,
+      },
+      App\Models\Job {#5285
+        title: "Political Science Teacher",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 5,
+      },
+      App\Models\Job {#5288
+        title: "Pesticide Sprayer",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 6,
+      },
+      App\Models\Job {#5289
+        title: "Central Office Operator",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 7,
+      },
+      App\Models\Job {#5290
+        title: "Mathematical Technician",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 8,
+      },
+      App\Models\Job {#5291
+        title: "Security Guard",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 9,
+      },
+      App\Models\Job {#5292
+        title: "Locker Room Attendant",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 10,
+      },
+      App\Models\Job {#5293
+        title: "Cost Estimator",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 11,
+      },
+    ],
+  }
+
+...skipping...
+= Illuminate\Database\Eloquent\Collection {#5279
+    all: [
+      App\Models\Job {#5283
+        title: "Gaming Manager",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 2,
+      },
+      App\Models\Job {#5254
+        title: "Radio Mechanic",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 3,
+      },
+      App\Models\Job {#5284
+        title: "Forest Fire Fighting Supervisor",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 4,
+      },
+      App\Models\Job {#5285
+        title: "Political Science Teacher",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 5,
+      },
+      App\Models\Job {#5288
+        title: "Pesticide Sprayer",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 6,
+      },
+      App\Models\Job {#5289
+        title: "Central Office Operator",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 7,
+      },
+      App\Models\Job {#5290
+        title: "Mathematical Technician",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 8,
+      },
+      App\Models\Job {#5291
+        title: "Security Guard",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 9,
+      },
+      App\Models\Job {#5292
+        title: "Locker Room Attendant",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 10,
+      },
+      App\Models\Job {#5293
+        title: "Cost Estimator",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 11,
+      },
+    ],
+  }
+
+(END)
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 3,
+      },
+      App\Models\Job {#5284
+        title: "Forest Fire Fighting Supervisor",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 4,
+      },
+      App\Models\Job {#5285
+        title: "Political Science Teacher",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 5,
+      },
+      App\Models\Job {#5288
+        title: "Pesticide Sprayer",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 6,
+      },
+      App\Models\Job {#5289
+        title: "Central Office Operator",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 7,
+      },
+      App\Models\Job {#5290
+        title: "Mathematical Technician",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 8,
+      },
+      App\Models\Job {#5291
+        title: "Security Guard",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 9,
+      },
+      App\Models\Job {#5292
+        title: "Locker Room Attendant",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 10,
+      },
+      App\Models\Job {#5293
+        title: "Cost Estimator",
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:09:26",
+        created_at: "2025-02-03 09:09:26",
+        id: 11,
+      },
+    ],
+  }
+
+(END)
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\User::factory()->unverified()->create();
+= App\Models\User {#5261
+    first_name: "Caroline",
+    last_name: "Ziemann",
+    email: "era68@example.org",
+    email_verified_at: null,
+    #password: "$2y$12$a677KzqsXFjzTGoyqDW0qOtpTsC70FQBpLa9YOVQ4dJ3MUwGsG28y",
+    #remember_token: "XXMR0ECldN",
+    updated_at: "2025-02-03 09:14:32",
+    created_at: "2025-02-03 09:14:32",
+    id: 27,
+  }
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan help make:model
+Description:
+  Create a new Eloquent model class
+
+Usage:
+  make:model [options] [--] <name>
+
+Arguments:
+  name                  The name of the model
+
+Options:
+  -a, --all             Generate a migration, seeder, factory, policy, resource controller, and form request classes for the model
+  -c, --controller      Create a new controller for the model
+  -f, --factory         Create a new factory for the model
+      --force           Create the class even if the model already exists
+  -m, --migration       Create a new migration file for the model
+      --morph-pivot     Indicates if the generated model should be a custom polymorphic intermediate table model
+      --policy          Create a new policy for the model
+  -s, --seed            Create a new seeder for the model
+  -p, --pivot           Indicates if the generated model should be a custom intermediate table model
+  -r, --resource        Indicates if the generated controller should be a resource controller
+      --api             Indicates if the generated controller should be an API resource controller
+  -R, --requests        Create new form request classes and use them in the resource controller
+      --test            Generate an accompanying Test test for the Model
+      --pest            Generate an accompanying Pest test for the Model
+      --phpunit         Generate an accompanying PHPUnit test for the Model
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:model Employer -m    
+
+   INFO  Model [app/Models/Employer.php] created successfully.  
+
+   INFO  Migration [database/migrations/2025_02_03_092529_create_employers_table.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:fresh           
+
+  Dropping all tables .................................................................................................................. 5.95ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................. 1.71ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ................................................................................................. 2.53ms DONE
+  0001_01_01_000001_create_cache_table ................................................................................................. 0.64ms DONE
+  0001_01_01_000002_create_jobs_table .................................................................................................. 1.99ms DONE
+  2025_02_03_070059_create_job_listing_table ........................................................................................... 6.88ms DONE
+  2025_02_03_092529_create_employers_table ............................................................................................. 0.32ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:model Employer -f    
+
+   INFO  Model [app/Models/Employer.php] created successfully.  
+
+   INFO  Factory [database/factories/EmployerFactory.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker                  
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::factory(10)->create();             
+
+   Illuminate\Database\QueryException  SQLSTATE[HY000]: General error: 1 table employers has no column named name (Connection: sqlite, SQL: insert into "employers" ("name", "updated_at", "created_at") values (Kunde, Wunsch and Howe, 2025-02-03 09:36:13, 2025-02-03 09:36:13)).
+
+> App\Models\User::factory()->unverified()->create();^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:fresh           
+
+  Dropping all tables .................................................................................................................. 4.79ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................. 2.17ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ................................................................................................. 2.79ms DONE
+  0001_01_01_000001_create_cache_table ................................................................................................. 0.98ms DONE
+  0001_01_01_000002_create_jobs_table .................................................................................................. 1.69ms DONE
+  2025_02_03_070059_create_job_listing_table ........................................................................................... 5.65ms DONE
+  2025_02_03_092529_create_employers_table ............................................................................................. 0.04ms FAIL
+
+   BadMethodCallException 
+
+  Method Illuminate\Database\Schema\Blueprint::name does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:115
+    111▕      */
+    112▕     public function __call($method, $parameters)
+    113▕     {
+    114▕         if (! static::hasMacro($method)) {
+  ➜ 115▕             throw new BadMethodCallException(sprintf(
+    116▕                 'Method %s::%s does not exist.', static::class, $method
+    117▕             ));
+    118▕         }
+    119▕ 
+
+  1   database/migrations/2025_02_03_092529_create_employers_table.php:16
+      Illuminate\Database\Schema\Blueprint::__call("name", [])
+      +4 vendor frames 
+
+  6   database/migrations/2025_02_03_092529_create_employers_table.php:14
+      Illuminate\Support\Facades\Facade::__callStatic("create")
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:fresh
+
+  Dropping all tables .................................................................................................................. 5.06ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ............................................................................................................. 1.70ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ................................................................................................. 3.05ms DONE
+  0001_01_01_000001_create_cache_table ................................................................................................. 1.31ms DONE
+  0001_01_01_000002_create_jobs_table .................................................................................................. 1.72ms DONE
+  2025_02_03_070059_create_job_listing_table ........................................................................................... 5.68ms DONE
+  2025_02_03_092529_create_employers_table ............................................................................................. 0.31ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker       
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> App\Models\Job::factory(10)->create();
+= Illuminate\Database\Eloquent\Collection {#5255
+    all: [
+      App\Models\Job {#5296
+        title: "Orthodontist",
+        employer_id: 1,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 1,
+      },
+      App\Models\Job {#5283
+        title: "Occupational Therapist Aide",
+        employer_id: 2,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 2,
+      },
+      App\Models\Job {#5257
+        title: "Telemarketer",
+        employer_id: 3,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 3,
+      },
+      App\Models\Job {#5302
+        title: "Computer Specialist",
+        employer_id: 4,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 4,
+      },
+      App\Models\Job {#5304
+        title: "Budget Analyst",
+        employer_id: 5,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 5,
+      },
+      App\Models\Job {#6058
+        title: "Aircraft Mechanics OR Aircraft Service Technician",
+        employer_id: 6,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 6,
+      },
+      App\Models\Job {#5648
+        title: "Telephone Operator",
+        employer_id: 7,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 7,
+      },
+      App\Models\Job {#6007
+        title: "Software Engineer",
+        employer_id: 8,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 8,
+      },
+      App\Models\Job {#6272
+        title: "Healthcare Practitioner",
+        employer_id: 9,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 9,
+      },
+      App\Models\Job {#6273
+        title: "Molding Machine Operator",
+        employer_id: 10,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 10,
+      },
+    ],
+  }
+
+(END)
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 3,
+      },
+      App\Models\Job {#5302
+        title: "Computer Specialist",
+        employer_id: 4,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 4,
+      },
+      App\Models\Job {#5304
+        title: "Budget Analyst",
+        employer_id: 5,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 5,
+      },
+      App\Models\Job {#6058
+        title: "Aircraft Mechanics OR Aircraft Service Technician",
+        employer_id: 6,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 6,
+      },
+      App\Models\Job {#5648
+        title: "Telephone Operator",
+        employer_id: 7,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 7,
+      },
+      App\Models\Job {#6007
+        title: "Software Engineer",
+        employer_id: 8,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 8,
+      },
+      App\Models\Job {#6272
+        title: "Healthcare Practitioner",
+        employer_id: 9,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 9,
+      },
+      App\Models\Job {#6273
+        title: "Molding Machine Operator",
+        employer_id: 10,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 10,
+      },
+    ],
+                                                                                                                                                                                                                
+  }
+
+
+jaypadhiyar@Jaykumars-MacBook-Air example % >....                                                                                                                                                               
+      App\Models\Job {#5302
+        title: "Computer Specialist",
+        employer_id: 4,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 4,
+      },
+      App\Models\Job {#5304
+        title: "Budget Analyst",
+        employer_id: 5,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 5,
+      },
+      App\Models\Job {#6058
+        title: "Aircraft Mechanics OR Aircraft Service Technician",
+        employer_id: 6,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 6,
+      },
+      App\Models\Job {#5648
+        title: "Telephone Operator",
+        employer_id: 7,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 7,
+      },
+      App\Models\Job {#6007
+        title: "Software Engineer",
+        employer_id: 8,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 8,
+      },
+      App\Models\Job {#6272
+        title: "Healthcare Practitioner",
+        employer_id: 9,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 9,
+      },
+      App\Models\Job {#6273
+        title: "Molding Machine Operator",
+        employer_id: 10,
+        salary: "$50000 USD",
+        updated_at: "2025-02-03 09:38:39",
+        created_at: "2025-02-03 09:38:39",
+        id: 10,
+      },
+    ],
+                                                                                                                                                                                                                 
+  }
+
+
+jaypadhiyar@Jaykumars-MacBook-Air example % 
+

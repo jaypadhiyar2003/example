@@ -1,0 +1,70 @@
+Last login: Tue Feb 11 10:50:33 on ttys000
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:policy
+
+ ┌ What should the policy be named? ────────────────────────────┐
+ │ JobPolicy                                                    │
+ └──────────────────────────────────────────────────────────────┘
+
+ ┌ What model should this policy apply to? (Optional) ──────────┐
+ │ Job                                                          │
+ └──────────────────────────────────────────────────────────────┘
+
+   INFO  Policy [app/Policies/JobPolicy.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:mail
+
+ ┌ What should the mailable be named? ──────────────────────────┐
+ │ JobPosted                                                    │
+ └──────────────────────────────────────────────────────────────┘
+
+ ┌ Would you like to create a view? ────────────────────────────┐
+ │ Empty View                                                   │
+ └──────────────────────────────────────────────────────────────┘
+
+   INFO  Mailable [app/Mail/JobPosted.php] created successfully.  
+
+   INFO  View [resources/views/mail/job-posted.blade.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan queue:work
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2025-02-11 07:14:26 App\Mail\JobPosted ............................. RUNNING
+  2025-02-11 07:14:33 App\Mail\JobPosted ............................. 6s DONE
+
+  [Restored 11 Feb 2025 at 12:49:02 PM]
+Last login: Tue Feb 11 12:47:54 on ttys000
+Restored session: Tue Feb 11 12:47:52 IST 2025
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan queue:work
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2025-02-11 07:19:09 Closure (web.php:15) ........................... RUNNING
+  2025-02-11 07:19:09 Closure (web.php:15) ....................... 9.05ms DONE
+  2025-02-11 07:20:06 Closure (web.php:15) ........................... RUNNING
+  2025-02-11 07:20:06 Closure (web.php:15) ....................... 4.00ms DONE
+^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:job
+
+ ┌ What should the job be named? ───────────────────────────────┐
+ │ TranslateJob                                                 │
+ └──────────────────────────────────────────────────────────────┘
+
+   INFO  Job [app/Jobs/TranslateJob.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan queue:work
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2025-02-11 07:25:04 App\Jobs\TranslateJob .......................................................................................................................................................... RUNNING
+  2025-02-11 07:25:04 App\Jobs\TranslateJob ...................................................................................................................................................... 9.25ms DONE
+  2025-02-11 07:30:23 App\Jobs\TranslateJob .......................................................................................................................................................... RUNNING
+  2025-02-11 07:30:23 App\Jobs\TranslateJob ...................................................................................................................................................... 7.21ms DONE
+^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan queue:work
+
+   INFO  Processing jobs from the [default] queue.  
+
+  2025-02-11 07:31:11 App\Jobs\TranslateJob .......................................................................................................................................................... RUNNING
+  2025-02-11 07:31:11 App\Jobs\TranslateJob ..................................................................................................................................................... 28.63ms DONE
+

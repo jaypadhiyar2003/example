@@ -1,0 +1,278 @@
+Last login: Tue Feb  4 12:37:35 on ttys000
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker         
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> $job = App\Models\User::first();                   
+= null
+
+> $job = App\Models\Job::first(); 
+= App\Models\Job {#5209
+    id: 1,
+    employer_id: 1,
+    title: "Orthodontist",
+    salary: "$50000 USD",
+    created_at: "2025-02-03 09:38:39",
+    updated_at: "2025-02-03 09:38:39",
+  }
+
+> $job->employer;
+= App\Models\Employer {#5221
+    id: 1,
+    name: "Hettinger-Nikolaus",
+    created_at: "2025-02-03 09:38:39",
+    updated_at: "2025-02-03 09:38:39",
+  }
+
+> ^C                                                                                                                                                                                                           
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan make:model Tag -mf
+
+   INFO  Model [app/Models/Tag.php] created successfully.  
+
+   INFO  Factory [database/factories/TagFactory.php] created successfully.  
+
+   INFO  Migration [database/migrations/2025_02_04_072752_create_tags_table.php] created successfully.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate           
+
+   INFO  Running migrations.  
+
+  2025_02_04_072752_create_tags_table .................................................................................................. 8.34ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate
+
+   INFO  Nothing to migrate.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate
+
+   INFO  Nothing to migrate.  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate::rollback && php artisan migrate
+
+   ERROR  There are no commands defined in the "migrate:" namespace. Did you mean one of these?  
+
+  ⇂ migrate  
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:rollback && php artisan migrate 
+
+   INFO  Rolling back migrations.  
+
+  2025_02_04_072752_create_tags_table .................................................................................................. 2.51ms DONE
+
+
+   INFO  Running migrations.  
+
+  2025_02_04_072752_create_tags_table ................................................................................................. 10.65ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan migrate:rollback && php artisan migrate
+
+   INFO  Rolling back migrations.  
+
+  2025_02_04_072752_create_tags_table .................................................................................................. 2.71ms DONE
+
+
+   INFO  Running migrations.  
+
+  2025_02_04_072752_create_tags_table .................................................................................................. 8.72ms DONE
+
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> $job = App\Models\Job::find(10);
+= null
+
+> $job = App\Models\Job::find(9); 
+= App\Models\Job {#5208
+    id: 9,
+    employer_id: 9,
+    title: "Healthcare Practitioner",
+    salary: "$50000 USD",
+    created_at: "2025-02-03 09:38:39",
+    updated_at: "2025-02-03 09:38:39",
+  }
+
+> $job->tags;                     
+
+   Illuminate\Database\QueryException  SQLSTATE[HY000]: General error: 1 no such column: job_tag.job_id (Connection: sqlite, SQL: select "tags".*, "job_tag"."job_id" as "pivot_job_id", "job_tag"."tag_id" as "pivot_tag_id" from "tags" inner join "job_tag" on "tags"."id" = "job_tag"."tag_id" where "job_tag"."job_id" = 9).
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> $job = App\Models\Job::find(9);
+= App\Models\Job {#5227
+    id: 9,
+    employer_id: 9,
+    title: "Healthcare Practitioner",
+    salary: "$50000 USD",
+    created_at: "2025-02-03 09:38:39",
+    updated_at: "2025-02-03 09:38:39",
+  }
+
+> $job->tags;                    
+= Illuminate\Database\Eloquent\Collection {#6026
+    all: [
+      App\Models\Tag {#6241
+        id: 3,
+        name: "jon",
+        created_at: null,
+        updated_at: null,
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#5975
+          job_listing_id: 9,
+          tag_id: 3,
+        },
+      },
+    ],
+  }
+
+> $job = App\Models\Tag::find(9);
+= null
+
+> $job = App\Models\Tag::find(3);
+= App\Models\Tag {#6094
+    id: 3,
+    name: "jon",
+    created_at: null,
+    updated_at: null,
+  }
+
+> $job->jobs;                    
+
+   Illuminate\Database\QueryException  SQLSTATE[HY000]: General error: 1 no such column: job_tag.job_id (Connection: sqlite, SQL: select "job_listing".*, "job_tag"."tag_id" as "pivot_tag_id", "job_tag"."job_id" as "pivot_job_id" from "job_listing" inner join "job_tag" on "job_listing"."id" = "job_tag"."job_id" where "job_tag"."tag_id" = 3).
+
+> ^C
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> $job = App\Models\Tag::find(3);
+= App\Models\Tag {#6186
+    id: 3,
+    name: "jon",
+    created_at: null,
+    updated_at: null,
+  }
+
+> $job->jobs;                    
+= Illuminate\Database\Eloquent\Collection {#5212
+    all: [
+      App\Models\Job {#5207
+        id: 9,
+        employer_id: 9,
+        title: "Healthcare Practitioner",
+        salary: "$50000 USD",
+        created_at: "2025-02-03 09:38:39",
+        updated_at: "2025-02-03 09:38:39",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#5209
+          tag_id: 3,
+          job_listing_id: 9,
+        },
+      },
+    ],
+  }
+
+> $job^C App\Models\Tag::find(3);
+jaypadhiyar@Jaykumars-MacBook-Air example % php artisan tinker
+Psy Shell v0.12.7 (PHP 8.4.3 — cli) by Justin Hileman
+> $tag = App\Models\Tag::find(3);
+= App\Models\Tag {#6186
+    id: 3,
+    name: "jon",
+    created_at: null,
+    updated_at: null,
+  }
+
+> $tag->jobs;                    
+= Illuminate\Database\Eloquent\Collection {#5212
+    all: [
+      App\Models\Job {#5207
+        id: 9,
+        employer_id: 9,
+        title: "Healthcare Practitioner",
+        salary: "$50000 USD",
+        created_at: "2025-02-03 09:38:39",
+        updated_at: "2025-02-03 09:38:39",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#5209
+          tag_id: 3,
+          job_listing_id: 9,
+        },
+      },
+    ],
+  }
+
+> $tag->jobs()->attach(7);
+= null
+
+> $tag->jobs()->attach(App\Models\Job::find(7));
+= null
+
+> $tag = App\Models\Tag::find(3);               
+= App\Models\Tag {#5205
+    id: 3,
+    name: "jon",
+    created_at: null,
+    updated_at: null,
+  }
+
+> $tag->jobs;                                   
+= Illuminate\Database\Eloquent\Collection {#6341
+    all: [
+      App\Models\Job {#5214
+        id: 9,
+        employer_id: 9,
+        title: "Healthcare Practitioner",
+        salary: "$50000 USD",
+        created_at: "2025-02-03 09:38:39",
+        updated_at: "2025-02-03 09:38:39",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#5206
+          tag_id: 3,
+          job_listing_id: 9,
+        },
+      },
+      App\Models\Job {#6199
+        id: 7,
+        employer_id: 7,
+        title: "Telephone Operator",
+        salary: "$50000 USD",
+        created_at: "2025-02-03 09:38:39",
+        updated_at: "2025-02-03 09:38:39",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#5215
+          tag_id: 3,
+          job_listing_id: 7,
+        },
+      },
+    ],
+  }
+
+> $tag->jobs()->get();                                                                                                                                            = Illuminate\Database\Eloquent\Collection {#5223
+    all: [
+      App\Models\Job {#5970
+        id: 9,
+        employer_id: 9,
+        title: "Healthcare Practitioner",
+        salary: "$50000 USD",
+        created_at: "2025-02-03 09:38:39",
+        updated_at: "2025-02-03 09:38:39",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#6040
+          tag_id: 3,
+          job_listing_id: 9,
+        },
+      },
+      App\Models\Job {#5224
+        id: 7,
+        employer_id: 7,
+        title: "Telephone Operator",
+        salary: "$50000 USD",
+        created_at: "2025-02-03 09:38:39",
+        updated_at: "2025-02-03 09:38:39",
+        pivot: Illuminate\Database\Eloquent\Relations\Pivot {#5203
+          tag_id: 3,
+          job_listing_id: 7,
+        },
+      },
+    ],
+  }
+
+> $tag->jobs()->get()->pluck('title');
+= Illuminate\Support\Collection {#5213
+    all: [
+      "Healthcare Practitioner",
+      "Telephone Operator",
+    ],
+  }
+
+>                                                                                                                                                                                                                                                                                                  
